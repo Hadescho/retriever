@@ -10,16 +10,14 @@
   </head>
 
   <body>
-    <nav class='navbar navbar-toggleable-md navbar-inverse fixed-top'>
-      <%= link_to 'Retriever', root_path, class: 'navbar-brand' %>
-      <div class='collapse navbar-collapse show'>
-        <ul class='navbar-nav mr-auto'>
-          <li class='nav-item'>
-            <%= link_to 'Tables', table_path, class: 'nav-link' %>
-          </li>
+    <nav class="navbar navbar-dark bg-dark">
+        <%= link_to "Retriever", root_path, class: 'nav-link navbar-brand' %>
+        <ul class="nav navbar-nav clearfix">
+          <%= render 'layouts/navigation_links' %>
         </ul>
-      </div>
     </nav>
-    <%= yield %>
+    <div class='container'>
+      <%= yield %>
+    </div>
   </body>
 </html>
