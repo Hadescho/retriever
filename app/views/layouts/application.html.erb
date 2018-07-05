@@ -10,6 +10,16 @@
   </head>
 
   <body>
+    <nav class='navbar navbar-toggleable-md navbar-inverse fixed-top'>
+      <%= link_to 'Retriever', root_path, class: 'navbar-brand' %>
+      <div class='collapse navbar-collapse show'>
+        <ul class='navbar-nav mr-auto'>
+          <li class='nav-item'>
+            <%= link_to 'Tables', table_path, class: 'nav-link' %>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>
