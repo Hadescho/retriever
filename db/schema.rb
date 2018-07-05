@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_04_074639) do
+ActiveRecord::Schema.define(version: 2018_07_05_080333) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,9 @@ ActiveRecord::Schema.define(version: 2018_07_04_074639) do
     t.string "referrer"
     t.integer "status_code"
     t.string "violated_directive"
+    t.string "source_file"
+    t.integer "line_number"
+    t.integer "column_number"
   end
 
 end
