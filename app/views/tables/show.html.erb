@@ -1,0 +1,9 @@
+<div class='row'>
+  <% @distincts.in_groups(2).each do |group| %>
+    <div class='col col-sm'>
+      <% group.map(&:compact).each do |table_info| %>
+        <%= render partial: 'table', locals: { table_info: table_info } %>
+      <% end %>
+    </div>
+  <% end %>
+</div>

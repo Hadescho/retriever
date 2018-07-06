@@ -108,3 +108,5 @@ tags
 # Session and anything else vim
 *.vim
 
+# Temporary
+spec/*

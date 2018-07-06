@@ -16,3 +16,9 @@
 
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+@import "css/dataTables.bootstrap4";
+
+
+nav.navbar {
+  margin-bottom: 45px;
+}
