@@ -1,25 +1,29 @@
-<h3>
-  <%= table_info[:table_name] %>
-</h3>
-<% if table_info[:data].any? %>
-  <table class='table' role='dataTable'>
-    <thead class='thead-dark'>
-      <tr>
-        <td>Value</td>
-        <td>Count</td>
-      </tr>
-    </thead>
-    <tbody>
-        <% table_info[:data].each do |row_info| %>
+<div class='card mb-3'>
+  <h3 class='card-header'>
+    <%= table_info[:table_name] %>
+  </h3>
+  <% if table_info[:data].any? %>
+    <div class='p-3'>
+      <table class='table' role='dataTable'>
+        <thead class='thead-dark'>
           <tr>
-            <td><%= row_info[:value] %></td>
-            <td><%= row_info[:count] %></td>
+            <td>Value</td>
+            <td>Count</td>
           </tr>
-        <% end %>
-    </tbody>
-  </table>
-<% else %>
-  <p class='error'>
-    Currently we don't have records containing <%= table_info[:table_name].downcase %>
-  </p>
-<% end %>
+        </thead>
+        <tbody>
+            <% table_info[:data].each do |row_info| %>
+              <tr>
+                <td><%= row_info[:value] %></td>
+                <td><%= row_info[:count] %></td>
+              </tr>
+            <% end %>
+        </tbody>
+      </table>
+    </div>
+  <% else %>
+    <p class='error'>
+      Currently we don't have records containing <%= table_info[:table_name].downcase %>
+    </p>
+  <% end %>
+</div>
